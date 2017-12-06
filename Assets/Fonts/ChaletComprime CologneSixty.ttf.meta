@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 7e38102dfefd8f346995efe3f9c6ded8
+timeCreated: 1507117230
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 72
+  forceTextureCase: -1
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: ChaletComprime
+  fontNames:
+  - ChaletComprime
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
