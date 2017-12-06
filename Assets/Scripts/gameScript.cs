@@ -33,7 +33,7 @@ public class gameScript : MonoBehaviour {
 	}
 
 	void Start () {
-        time = 2000f;
+        time = 200f;
         anim = GetComponent<Animator>();
         comeIn = false;
         ch = 0;
@@ -48,7 +48,7 @@ public class gameScript : MonoBehaviour {
 		
 		if (Time.timeScale == 1) {
 			time--;
-			timer.fillAmount = time / 2000f;
+			timer.fillAmount = time / 200f;
 		}
 
 		if(timer.fillAmount<=0 || hc.curr_health <=0){

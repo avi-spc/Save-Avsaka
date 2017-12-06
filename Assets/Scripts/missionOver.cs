@@ -69,8 +69,8 @@ public class missionOver : MonoBehaviour {
 		//for (int i = 0; i < GameController.control.array.Length; i++) {
 			finalStatus = string.Join (separator, statusToFile);
 		//}
-		if (File.Exists ("C:/Users/Monster/Desktop/statusInfo.txt")) {
-			File.WriteAllText ("C:/Users/Monster/Desktop/statusInfo.txt",finalStatus);
+		if (File.Exists ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt")) {
+			File.WriteAllText ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt",finalStatus);
 		//	Debug
 		}
 	}

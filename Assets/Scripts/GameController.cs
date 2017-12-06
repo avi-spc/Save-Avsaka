@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour {
     public int score, plaIndex;
 	public bool m;
 	public string[] array = new string[6];
-
+	public float v;
 	// Use this for initialization
 	void Awake () {
 
@@ -41,8 +41,10 @@ public class GameController : MonoBehaviour {
     ////Update is called once per frame
     void Update()
     {
-		if (File.Exists ("C:/Users/Monster/Desktop/statusInfo.txt")) {
-			StreamReader sr = new StreamReader ("C:/Users/Monster/Desktop/statusInfo.txt");
+		v = Mathf.Repeat (Time.time, 2f);
+		if(v>1f)
+		if (File.Exists ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt")) {
+			StreamReader sr = new StreamReader ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt");
 			//string[] array;
 			string str = "";
 			str = sr.ReadLine();
