@@ -62,16 +62,16 @@ public class missionOver : MonoBehaviour {
 	}
 
 	public void returnToBase(){
-		SceneManager.LoadScene ("Main Menu");
-		string[] statusToFile = GameController.control.array;
-		string separator = " ";
-		string finalStatus = "";
+		SceneManager.LoadScene ("Planets");
+		//string[] statusToFile = GameController.control.array;
+		//string separator = " ";
+		//string finalStatus = "";
 		//for (int i = 0; i < GameController.control.array.Length; i++) {
-			finalStatus = string.Join (separator, statusToFile);
+		//	finalStatus = string.Join (separator, statusToFile);
 		//}
-		if (File.Exists ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt")) {
-			File.WriteAllText ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt",finalStatus);
+		//if (File.Exists ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt")) {
+			//File.WriteAllText ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt",finalStatus);
 		//	Debug
-		}
+	//	}
 	}
 }

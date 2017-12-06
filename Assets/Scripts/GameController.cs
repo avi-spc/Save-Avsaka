@@ -39,17 +39,24 @@ public class GameController : MonoBehaviour {
 		    }
 
     ////Update is called once per frame
-    void Update()
-    {
-		v = Mathf.Repeat (Time.time, 2f);
-		if(v>1f)
-		if (File.Exists ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt")) {
+	/// 
+	/// 
+
+	void FixedUpdate(){
+	//	if (File.Exists ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt")) {
 			StreamReader sr = new StreamReader ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt");
 			//string[] array;
 			string str = "";
 			str = sr.ReadLine();
 			array = str.Split ();
-		}
+		//}
+	}
+
+    void Update()
+    {
+		//v = Mathf.Repeat (Time.time, 2f);
+		//if(v<0.01f)
+
 
 		user_name = user.text;
         //PlayerData data = new PlayerData();
