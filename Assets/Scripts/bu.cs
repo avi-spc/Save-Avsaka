@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.IO;
+
 public class bu : MonoBehaviour {
 	public string[] statusToFile = new string[6];
 	public int c;

@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour {
 	public bool m;
 	public string[] array = new string[6];
 	public float v;
+	public string sre = "";
 	// Use this for initialization
 	void Awake () {
 
@@ -37,6 +38,8 @@ public class GameController : MonoBehaviour {
 
     void Start()
     {
+
+
        // hc = hero.GetComponent<hero_controller>();
 		    }
 
@@ -53,10 +56,7 @@ public class GameController : MonoBehaviour {
 			array = str.Split ();
 		//}
 		//if (File.Exists ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_percentCompletion")) {
-			StreamReader sre = new StreamReader ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_percentCompletion.txt");
-			if (sre.Equals (""))
-				countCom = 0;
-			countCom = int.Parse ((sre.ReadLine ()));
+
 		//}
 		switch (countCom) {
 		case 1:
@@ -91,7 +91,11 @@ public class GameController : MonoBehaviour {
 		//v = Mathf.Repeat (Time.time, 2f);
 		//if(v<0.01f)
 
+		sre = File.ReadAllText("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_percentCompletion.txt");
 
+		if (sre.Equals (""))
+			countCom = 0;
+		countCom = int.Parse (sre);
 
         //PlayerData data = new PlayerData();
         //score = hc.finalScoreInt;
