@@ -51,11 +51,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b07a296cb35f04a4e8e307a3871de49c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  user: {fileID: 0}
-  mname: {fileID: 0}
-  mdifficulty: {fileID: 0}
+  user: {fileID: 114795941124016312, guid: 02512cded0f7f1847a72a25b5a58ed1a, type: 2}
   user_name: 
-  mission: 
-  difficulty: 
   score: 0
+  plaIndex: 0
+  countCom: 0
+  perComNum: 0
   m: 0
+  array:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  v: 0

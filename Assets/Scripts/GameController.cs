@@ -6,13 +6,14 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class GameController : MonoBehaviour {
 
     public static GameController control;
    // private hero_controller hc;
    /// public GameObject hero;
-    public Text user;
+    
     public String user_name;
 	public int score, plaIndex, countCom, perComNum;
 	public bool m;
@@ -26,6 +27,7 @@ public class GameController : MonoBehaviour {
         if (control == null)
         {
             DontDestroyOnLoad(gameObject);
+			//DontDestroyOnLoad (user);
             control = this;
         }
         else if (control != this) {
@@ -43,18 +45,19 @@ public class GameController : MonoBehaviour {
 	/// 
 
 	void FixedUpdate(){
-	//	if (File.Exists ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt")) {
+		//if (File.Exists ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt")) {
 			StreamReader sr = new StreamReader ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt");
-				//string[] array;
+			//string[] array;
 			string str = "";
-			str = sr.ReadLine();
+			str = sr.ReadLine ();
 			array = str.Split ();
-
-		StreamReader sre = new StreamReader ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_percentCompletion.txt");
-		if (sre.Equals(""))
-			countCom = 0;
-		countCom = int.Parse ((sre.ReadLine ()));
-
+		//}
+		//if (File.Exists ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_percentCompletion")) {
+			StreamReader sre = new StreamReader ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_percentCompletion.txt");
+			if (sre.Equals (""))
+				countCom = 0;
+			countCom = int.Parse ((sre.ReadLine ()));
+		//}
 		switch (countCom) {
 		case 1:
 			perComNum = 8;
@@ -89,7 +92,7 @@ public class GameController : MonoBehaviour {
 		//if(v<0.01f)
 
 
-		user_name = user.text;
+
         //PlayerData data = new PlayerData();
         //score = hc.finalScoreInt;
         if (Input.GetKey(KeyCode.L)) {

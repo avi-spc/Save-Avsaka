@@ -88,8 +88,9 @@ public class MainMenuScript : MonoBehaviour {
     public void MissionsToMain() {
         anim.SetTrigger("MiMa");
 		GameController.control.m = false;
-		int scene = SceneManager.GetActiveScene ().buildIndex;
-		SceneManager.LoadScene (scene, LoadSceneMode.Single);
+	//	int scene = SceneManager.GetActiveScene ().buildIndex;
+//		GameController.control.user.text = "";
+		SceneManager.LoadScene ("MiToMain");
     }
 
     public void MainToOptions() {
@@ -109,7 +110,14 @@ public class MainMenuScript : MonoBehaviour {
     }
 
     public void ToGame() {
-        SceneManager.LoadScene("Setup");
+		if (GameController.control.plaIndex > 0) {
+			if (GameController.control.array [GameController.control.plaIndex - 1].Equals ("complete"))
+				SceneManager.LoadScene ("Setup");
+		}
+
+		else if(GameController.control.plaIndex == 0)
+			SceneManager.LoadScene("Setup");
+		
     }
 
     public void roundSound() {

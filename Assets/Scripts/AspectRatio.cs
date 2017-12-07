@@ -9,7 +9,7 @@ public class AspectRatio : MonoBehaviour
 	public bool isOld = true;
 	public int countCompletion;
 	public Text percentCom;
-
+	public Text user;
 	void Start(){
 		
 	}
@@ -25,15 +25,12 @@ public class AspectRatio : MonoBehaviour
 			isOld = true;
 		}
 
-
-
-
-
-			
+					
         transform.Rotate(new Vector3(0, 45, 0) * Time.deltaTime);
     }
 
 	public void createFile(){
+		GameController.control.user_name = user.text;
 		if (EventSystem.current.currentSelectedGameObject.name == "Start" && isOld == false) {
 			if (!Directory.Exists ("C:/Users/Monster/Desktop/" + GameController.control.user_name)) {
 				Directory.CreateDirectory ("C:/Users/Monster/Desktop/" + GameController.control.user_name);
