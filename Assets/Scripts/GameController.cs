@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour {
    /// public GameObject hero;
     public Text user;
     public String user_name;
-	public int score, plaIndex, countCom;
+	public int score, plaIndex, countCom, perComNum;
 	public bool m;
 	public string[] array = new string[6];
 	public float v;
@@ -45,12 +45,39 @@ public class GameController : MonoBehaviour {
 	void FixedUpdate(){
 	//	if (File.Exists ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt")) {
 			StreamReader sr = new StreamReader ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt");
-		//StreamReader sre = new StreamReader ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_percentCompletion.txt");
-		//countCom = int.Parse ((sre.ReadLine ()));
-			//string[] array;
+				//string[] array;
 			string str = "";
 			str = sr.ReadLine();
 			array = str.Split ();
+
+		StreamReader sre = new StreamReader ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_percentCompletion.txt");
+		if (sre.Equals(""))
+			countCom = 0;
+		countCom = int.Parse ((sre.ReadLine ()));
+
+		switch (countCom) {
+		case 1:
+			perComNum = 8;
+			break;
+		case 2:
+			perComNum = 20;
+			break;
+		case 3:
+			perComNum = 35;
+			break;
+		case 4:
+			perComNum = 50;
+			break;
+		case 5:
+			perComNum = 75;
+			break;
+		case 6: 
+			perComNum = 100;
+			break;
+		default:
+			perComNum = 0;
+			break;
+		}
 
 		}
 		//}

@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using UnityEngine.EventSystems;
-
+using UnityEngine.UI;
 public class AspectRatio : MonoBehaviour
 {
 	public bool isOld = true;
 	public int countCompletion;
+	public Text percentCom;
 
 	void Start(){
-		countCompletion = GameController.control.countCom;
-		//switch (countCompletion) {
-		//case 1:
-		//}
+		
 	}
 
     void Update() {
+		countCompletion = GameController.control.countCom;
+		percentCom.text = GameController.control.perComNum.ToString();
 		if (EventSystem.current.currentSelectedGameObject.name == "New Game") {
 			isOld = false;
 		}
@@ -24,6 +24,11 @@ public class AspectRatio : MonoBehaviour
 		if(EventSystem.current.currentSelectedGameObject.name == "Load Game"){
 			isOld = true;
 		}
+
+
+
+
+
 			
         transform.Rotate(new Vector3(0, 45, 0) * Time.deltaTime);
     }
