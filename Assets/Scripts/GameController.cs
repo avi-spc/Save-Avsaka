@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour {
    /// public GameObject hero;
     public Text user;
     public String user_name;
-    public int score, plaIndex;
+	public int score, plaIndex, countCom;
 	public bool m;
 	public string[] array = new string[6];
 	public float v;
@@ -45,12 +45,16 @@ public class GameController : MonoBehaviour {
 	void FixedUpdate(){
 	//	if (File.Exists ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt")) {
 			StreamReader sr = new StreamReader ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt");
+		//StreamReader sre = new StreamReader ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_percentCompletion.txt");
+		//countCom = int.Parse ((sre.ReadLine ()));
 			//string[] array;
 			string str = "";
 			str = sr.ReadLine();
 			array = str.Split ();
+
+		}
 		//}
-	}
+
 
     void Update()
     {

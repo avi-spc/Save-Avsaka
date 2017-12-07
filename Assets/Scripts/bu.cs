@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using System.IO;
 public class bu : MonoBehaviour {
 	public string[] statusToFile = new string[6];
+	public int c;
 	// Use this for initialization
 	void Start () {
 		
@@ -18,6 +19,12 @@ public class bu : MonoBehaviour {
 	public void g(){
 		SceneManager.LoadScene ("Main Menu");
 		statusToFile = GameController.control.array;
+		foreach (string a in GameController.control.array) {
+			if (a == "complete") {
+				c++;
+			//	GameController.control.countCom = c;	
+			}
+		}
 		string separator = " ";
 		string finalStatus = "";
 		//for (int i = 0; i < GameController.control.array.Length; i++) {
@@ -25,6 +32,11 @@ public class bu : MonoBehaviour {
 		//}
 		if (File.Exists ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt")) {
 			File.WriteAllText ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt",finalStatus);
+			//	Debug
+		}
+
+		if (File.Exists ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_percentCompletion.txt")) {
+			File.WriteAllText ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_percentCompletion.txt",c.ToString());
 			//	Debug
 		}
 	}

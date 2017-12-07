@@ -7,9 +7,16 @@ using UnityEngine.EventSystems;
 public class AspectRatio : MonoBehaviour
 {
 	public bool isOld = true;
+	public int countCompletion;
 
-    void Update()
-    {
+	void Start(){
+		countCompletion = GameController.control.countCom;
+		//switch (countCompletion) {
+		//case 1:
+		//}
+	}
+
+    void Update() {
 		if (EventSystem.current.currentSelectedGameObject.name == "New Game") {
 			isOld = false;
 		}
@@ -17,8 +24,7 @@ public class AspectRatio : MonoBehaviour
 		if(EventSystem.current.currentSelectedGameObject.name == "Load Game"){
 			isOld = true;
 		}
-
-
+			
         transform.Rotate(new Vector3(0, 45, 0) * Time.deltaTime);
     }
 
@@ -27,6 +33,7 @@ public class AspectRatio : MonoBehaviour
 			if (!Directory.Exists ("C:/Users/Monster/Desktop/" + GameController.control.user_name)) {
 				Directory.CreateDirectory ("C:/Users/Monster/Desktop/" + GameController.control.user_name);
 				File.Copy ("C:/Users/Monster/Desktop/statusInfo.txt","C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt",true);
+				File.Create ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_percentCompletion.txt");
 			}
 		}
 	}
