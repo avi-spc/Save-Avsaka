@@ -132,6 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7ad8f10b017ec54bb473b687864f9d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 0
   timer: {fileID: 0}
   pauseBanner: {fileID: 0}
   comeIn: 0
@@ -142,21 +143,19 @@ MonoBehaviour:
   v: 0
   c: 0
   userPlay: {fileID: 0}
-  required:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   mandlInfo:
   - {fileID: 0}
   - {fileID: 0}
   egg: {fileID: 1969884805817490, guid: 5bc264fefdc7996439b856c296ef0705, type: 2}
   pausePanel: {fileID: 0}
   miOverPanel: {fileID: 0}
+  box: {fileID: 1714026091667264, guid: e829b9c474940aa4abeeaa05e8343197, type: 2}
+  b_box: {fileID: 1574870914865284, guid: 040cf06adf1e1cb47aeccfea9f7bc53f, type: 2}
   enemies:
   - {fileID: 1273354343973760, guid: 63e75b72d9e59004fbfd499b170b79be, type: 2}
   - {fileID: 1331187440317496, guid: 967929798a95b6b43a024ea738559fda, type: 2}
   - {fileID: 1008288345019424, guid: 1db0d99b701eee841abd0ea852395f70, type: 2}
+  - {fileID: 1714026091667264, guid: e829b9c474940aa4abeeaa05e8343197, type: 2}
   spawnPoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -173,3 +172,4 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  boxColl: {fileID: 65030881136120170, guid: e829b9c474940aa4abeeaa05e8343197, type: 2}

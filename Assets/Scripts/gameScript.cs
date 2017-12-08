@@ -16,24 +16,26 @@ public class gameScript : MonoBehaviour {
 	public float v,c;
 	public Text userPlay;
 	public Text[] mandlInfo = new Text[2];
-	public GameObject egg, pausePanel, miOverPanel;
+	public GameObject egg, pausePanel, miOverPanel, box;
 	public GameObject[] enemies;
 	public Transform[] spawnPoints, foodPoints;
-	GameObject eggI, hero;
+	GameObject eggI, hero, b_box;
 	private string jsonStringML;
 	private JsonData mandlInfoData;
-
+	public Collider boxColl;
 	// Use this for initialization
 
 	void Awake(){
 		hero = GameObject.Find ("hero_weapon"); 
+	//	box = GameObject.Find ("box");
 		pausePanel.SetActive (false);
 		miOverPanel.SetActive (false);
 		GameController.control.m = true;
+		boxColl.enabled = true;
 	}
 
 	void Start () {
-        time = 2000f;
+        time = 1000f;
         anim = GetComponent<Animator>();
         comeIn = false;
         ch = 0;
@@ -41,6 +43,7 @@ public class gameScript : MonoBehaviour {
 		hc = hero.GetComponent<hero_controller> ();
 		//readRequirements ();
 		readmlInfo ();
+
 	}
 	
 	// Update is called once per frame
@@ -48,7 +51,7 @@ public class gameScript : MonoBehaviour {
 		
 		if (Time.timeScale == 1) {
 			time--;
-			timer.fillAmount = time / 2000f;
+			timer.fillAmount = time / 1000f;
 		}
 
 		if(timer.fillAmount<=0 || hc.curr_health <=0){
@@ -56,6 +59,16 @@ public class gameScript : MonoBehaviour {
 			Time.timeScale = 0;
 			pauseBanner.enabled = false;
 			pausePanel.SetActive (false);
+		}
+
+		if (timer.fillAmount == 0.7f) {
+			b_box = Instantiate (box);
+		}
+
+		if (timer.fillAmount <= 0.2f) {
+			//boxColl.enabled = false;
+			b_box.GetComponent<BoxCollider>().isTrigger = true;
+			//Instantiate (b_box, box.transform.position, box.transform.rotation);
 		}
 
         if ((ch == -1 || ch == 0) && Input.GetKeyDown(KeyCode.Escape))

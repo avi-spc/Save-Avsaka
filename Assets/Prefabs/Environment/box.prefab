@@ -54,6 +54,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -69,6 +70,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -140,6 +142,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxHits: 0
+  surObjectIndex: 0
+  extraction: {fileID: 0}
+  lightning: {fileID: 0}
+  rockHits: 0
+  plantHits: 0
   broken_box: {fileID: 1574870914865284, guid: 040cf06adf1e1cb47aeccfea9f7bc53f, type: 2}
   egg: {fileID: 0}
+  cloud: {fileID: 0}
+  surpriseObjects:
+  - {fileID: 1067969255691334, guid: 426ddf37cd4bb974c9f0ededa900537d, type: 2}
+  - {fileID: 1385996589218676, guid: 85c40a5810db7d14c970a23cff5e69f6, type: 2}
+  - {fileID: 1550105111132312, guid: 74a6e294028c6604bb73a8b79cda05b8, type: 2}
+  t: 0
   eggColl: {fileID: 0}
