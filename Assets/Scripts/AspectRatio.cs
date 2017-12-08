@@ -10,6 +10,9 @@ public class AspectRatio : MonoBehaviour
 	public int countCompletion;
 	public Text percentCom;
 	public Text user;
+	public Image percentBar;
+	public Button but;
+
 	void Start(){
 		
 	}
@@ -17,6 +20,8 @@ public class AspectRatio : MonoBehaviour
     void Update() {
 		countCompletion = GameController.control.countCom;
 		percentCom.text = GameController.control.perComNum.ToString();
+		percentBar.fillAmount = GameController.control.perComNum / 100f;
+
 		if (EventSystem.current.currentSelectedGameObject.name == "New Game") {
 			isOld = false;
 		}
@@ -24,6 +29,7 @@ public class AspectRatio : MonoBehaviour
 		if(EventSystem.current.currentSelectedGameObject.name == "Load Game"){
 			isOld = true;
 		}
+
 
 					
         transform.Rotate(new Vector3(0, 45, 0) * Time.deltaTime);
@@ -38,5 +44,14 @@ public class AspectRatio : MonoBehaviour
 				File.Create ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_percentCompletion.txt");
 			}
 		}
+
+	//	if(EventSystem.current.currentSelectedGameObject.name == "Start" && isOld == true){
+	//		if (!Directory.Exists ("C:/Users/Monster/Desktop/" + GameController.control.user_name)) {
+	//			but.	
+	//		} else if (Directory.Exists ("C:/Users/Monster/Desktop/" + GameController.control.user_name))
+	//			but.interactable = true;
+
+	//	}
+
 	}
 }

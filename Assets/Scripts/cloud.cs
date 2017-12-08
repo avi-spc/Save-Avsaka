@@ -8,5 +8,6 @@ using UnityEngine.SceneManagement;
 public class cloud : MonoBehaviour {
 	public void mitomain(){
 		SceneManager.LoadScene ("Main Menu");
+		GameController.control.user_name = "";
 	}	
 }
