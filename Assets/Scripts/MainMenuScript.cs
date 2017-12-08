@@ -113,7 +113,7 @@ public class MainMenuScript : MonoBehaviour {
 
     public void ToGame() {
 		if (GameController.control.plaIndex > 0) {
-			if (GameController.control.array [GameController.control.plaIndex - 1].Equals ("complete"))
+			if (GameController.control.array [GameController.control.plaIndex - 1].Equals ("Completed"))
 				SceneManager.LoadScene ("Setup");
 		}
 

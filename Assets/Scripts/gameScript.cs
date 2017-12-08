@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿	using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,13 +15,13 @@ public class gameScript : MonoBehaviour {
     public int ch, randomEnemy, randomSpawnPoints, foodP;
 	public float v,c;
 	public Text userPlay;
-	public Text[] required = new Text[4], mandlInfo = new Text[2];
+	public Text[] mandlInfo = new Text[2];
 	public GameObject egg, pausePanel, miOverPanel;
 	public GameObject[] enemies;
 	public Transform[] spawnPoints, foodPoints;
 	GameObject eggI, hero;
-	private string jsonStringR, jsonStringML;
-	private JsonData requiredDataR, mandlInfoData;
+	private string jsonStringML;
+	private JsonData mandlInfoData;
 
 	// Use this for initialization
 
@@ -33,13 +33,13 @@ public class gameScript : MonoBehaviour {
 	}
 
 	void Start () {
-        time = 200f;
+        time = 2000f;
         anim = GetComponent<Animator>();
         comeIn = false;
         ch = 0;
 		userPlay.text = GameController.control.user_name;
 		hc = hero.GetComponent<hero_controller> ();
-		readRequirements ();
+		//readRequirements ();
 		readmlInfo ();
 	}
 	
@@ -48,7 +48,7 @@ public class gameScript : MonoBehaviour {
 		
 		if (Time.timeScale == 1) {
 			time--;
-			timer.fillAmount = time / 200f;
+			timer.fillAmount = time / 2000f;
 		}
 
 		if(timer.fillAmount<=0 || hc.curr_health <=0){
@@ -102,13 +102,7 @@ public class gameScript : MonoBehaviour {
 		Destroy (eggI,10f);
 	}
 
-	void readRequirements(){
-		jsonStringR = File.ReadAllText ("C:/Users/Monster/Desktop/successRequirements.json");
-		requiredDataR = JsonMapper.ToObject (jsonStringR);
-		for (int j = 0; j < required.Length; j++) {
-			required [j].text = (requiredDataR ["Requirements"] [GameController.control.plaIndex] [j]).ToString ();
-		}
-	}
+
 
 	void readmlInfo(){
 		jsonStringML = File.ReadAllText ("C:/Users/Monster/Desktop/planetsInfo.json");

@@ -284,7 +284,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1359567668110940
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +369,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1427549633782788
 GameObject:
   m_ObjectHideFlags: 1
@@ -2611,11 +2611,6 @@ MonoBehaviour:
   v: 0
   c: 0
   userPlay: {fileID: 114860555786204576}
-  required:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   mandlInfo:
   - {fileID: 0}
   - {fileID: 0}
@@ -2699,6 +2694,11 @@ MonoBehaviour:
   conORfai: {fileID: 114202848291739498}
   survived: 0
   gameScreen: {fileID: 0}
+  required:
+  - {fileID: 114299228166344716}
+  - {fileID: 114848908843815350}
+  - {fileID: 114446160807273682}
+  - {fileID: 114441607340192014}
 --- !u!114 &114956240190319446
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -21,7 +21,7 @@ public class bu : MonoBehaviour {
 		SceneManager.LoadScene ("Main Menu");
 		statusToFile = GameController.control.array;
 		foreach (string a in GameController.control.array) {
-			if (a == "complete") {
+			if (a == "Completed") {
 				c++;
 			//	GameController.control.countCom = c;	
 			}

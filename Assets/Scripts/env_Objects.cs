@@ -6,7 +6,7 @@ public class env_Objects : MonoBehaviour {
 
     public int boxHits;
     public ParticleSystem extraction, lightning;
-    public static int rockHits,plantHits;
+    public int rockHits,plantHits;
     public GameObject broken_box,egg,cloud;
     GameObject hero;
     int groundMask,envMask;
@@ -50,14 +50,14 @@ public class env_Objects : MonoBehaviour {
 
         if (coll.Raycast(hc.gunRay, out hc.gunHit, 1000f) && hc.gunHit.transform.tag == "Rock" && Input.GetKey(KeyCode.Space))
         {
-            hc.perRock = rockHits++;
+			hc.perRock = hc.perRock + rockHits++;
             extraction.enableEmission = true;
             extraction.transform.position = hc.gunHit.point;
         }
 
         if (coll.Raycast(hc.gunRay, out hc.gunHit, 1000f) && hc.gunHit.transform.tag == "Plant" && Input.GetKey(KeyCode.Space))
         {
-            hc.perSeed = plantHits++;
+			hc.perSeed = hc.perSeed + plantHits++;
             extraction.enableEmission = true;
             extraction.transform.position = hc.gunHit.point;
         }

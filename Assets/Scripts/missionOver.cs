@@ -14,6 +14,9 @@ public class missionOver : MonoBehaviour {
 	private hero_controller hc;
 	public GameObject gameScreen;
 	private gameScript gs;
+	private string jsonStringR;
+	private JsonData requiredDataR;
+	public Text[] required = new Text[4];
 	//private JsonData statusInfo;
 
 	//KeyValuePair<string,object> l = new KeyValuePair<string,object>("r",statusInfo);
@@ -33,7 +36,7 @@ public class missionOver : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		readRequirements ();
 		eKilled.text = hc.eK_count.ToString ();
 		rockC.text = hc.perRock.ToString ();
 		seedC.text = hc.perSeed.ToString ();
@@ -50,15 +53,27 @@ public class missionOver : MonoBehaviour {
 			survived = false;
 		}
 
-		if (survived == true) {
+		if (hc.eK_count >= int.Parse((requiredDataR ["Requirements"] [GameController.control.plaIndex] [0]).ToString())
+			&& hc.perRock >= int.Parse((requiredDataR ["Requirements"] [GameController.control.plaIndex] [1]).ToString())
+			&& hc.perSeed >= int.Parse((requiredDataR ["Requirements"] [GameController.control.plaIndex] [2]).ToString())
+			&& hc.finalFoodInt >= int.Parse((requiredDataR ["Requirements"] [GameController.control.plaIndex] [3]).ToString())
+			&& survived == true) {
 			conORfai.text = "Conquored ! ! !";
-			GameController.control.array[GameController.control.plaIndex] = "complete";
+			GameController.control.array[GameController.control.plaIndex] = "Completed";
 		} 
 
 		else {
 			conORfai.text = "Failed";
 		}
 			
+	}
+
+	void readRequirements(){
+		jsonStringR = File.ReadAllText ("C:/Users/Monster/Desktop/successRequirements.json");
+		requiredDataR = JsonMapper.ToObject (jsonStringR);
+		for (int j = 0; j < required.Length; j++) {
+			required [j].text = (requiredDataR ["Requirements"] [GameController.control.plaIndex] [j]).ToString ();
+		}
 	}
 
 	public void returnToBase(){
