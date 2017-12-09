@@ -28,6 +28,7 @@ public class MainMenuScript : MonoBehaviour {
 		if (GameController.control.m == true) {
 			MainToMissions ();
 		}
+		GameController.control.Load ();
 	}
 
     // Update is called once per frame
@@ -114,11 +115,11 @@ public class MainMenuScript : MonoBehaviour {
     public void ToGame() {
 		if (GameController.control.plaIndex > 0) {
 			if (GameController.control.array [GameController.control.plaIndex - 1].Equals ("Completed"))
-				SceneManager.LoadScene ("Setup");
+				SceneManager.LoadScene ("LevelTransfer");
 		}
 
 		else if(GameController.control.plaIndex == 0)
-			SceneManager.LoadScene("Setup");
+			SceneManager.LoadScene("LevelTransfer");
 		
     }
 

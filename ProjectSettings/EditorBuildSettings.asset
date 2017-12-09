@@ -9,11 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 299f04982c9e4f445b808ca62598f2ca
   - enabled: 1
-    path: Assets/Scenes/Planets.unity
-    guid: dbdf8e8ec8ce4934698c03d33480a26e
-  - enabled: 1
     path: Assets/Scenes/MiToMain.unity
     guid: f66ca154b3f97ef47a50b6e3b66f8c36
   - enabled: 1
-    path: Assets/Scenes/Setup.unity
+    path: Assets/Scenes/GameToMissions.unity
+    guid: 7eaaffee4c06e7d489c41b5797c24ba7
+  - enabled: 1
+    path: Assets/Scenes/LevelTransfer.unity
+    guid: 7b156c7b2bf1ecd40950965632cf0812
+  - enabled: 1
+    path: Assets/Scenes/1.unity
     guid: 69afbfa057dac444c9b50e5a512d0dc7

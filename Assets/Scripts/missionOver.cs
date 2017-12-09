@@ -77,7 +77,8 @@ public class missionOver : MonoBehaviour {
 	}
 
 	public void returnToBase(){
-		SceneManager.LoadScene ("Planets");
+		SceneManager.LoadScene ("GameToMissions");
+		GameController.control.Save ();
 		//string[] statusToFile = GameController.control.array;
 		//string separator = " ";
 		//string finalStatus = "";

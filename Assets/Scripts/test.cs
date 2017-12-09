@@ -25,13 +25,14 @@ public class test : MonoBehaviour {
         for (int i=0;i<panel.Length;i++) {
             panel[i].SetActive(false);
         }
-
-		GameController.control.plaIndex = -1;
+		index = -1;
+		// 	GameController.control.plaIndex = -1;
 
     }
 
 	void Update(){
-		//GameController.control.plaIndex = index;
+		GameController.control.plaIndex = index;
+		GameController.control.levelName = (planetsData ["Planets"] [index][1]).ToString();
 	}
 
     public void P0() {
@@ -59,7 +60,7 @@ public class test : MonoBehaviour {
         planets[4].SetActive(false);
         planets[5].SetActive(false);
 		wlcmToBase.enabled = false;
-		GameController.control.plaIndex = index;
+		//GameController.control.plaIndex = index;
 		readData (index);
     }
 
@@ -88,7 +89,7 @@ public class test : MonoBehaviour {
         planets[4].SetActive(false);
         planets[5].SetActive(false);
 		wlcmToBase.enabled = false;
-		GameController.control.plaIndex = index;
+		//GameController.control.plaIndex = index;
 		readData (index);
     }
 
@@ -116,7 +117,7 @@ public class test : MonoBehaviour {
         planets[4].SetActive(false);
         planets[5].SetActive(false);
 		wlcmToBase.enabled = false;
-		GameController.control.plaIndex = index;
+		//GameController.control.plaIndex = index;
 		readData (index);
     }
 
@@ -144,7 +145,7 @@ public class test : MonoBehaviour {
         planets[4].SetActive(false);
         planets[5].SetActive(false);
 		wlcmToBase.enabled = false;
-		GameController.control.plaIndex = index;
+		//GameController.control.plaIndex = index;
 		readData (index);
     }
 
@@ -172,7 +173,7 @@ public class test : MonoBehaviour {
         planets[0].SetActive(false);
         planets[5].SetActive(false);
 		wlcmToBase.enabled = false;
-		GameController.control.plaIndex = index;
+		//GameController.control.plaIndex = index;
 		readData (index);
     }
 
@@ -200,7 +201,7 @@ public class test : MonoBehaviour {
         planets[4].SetActive(false);
         planets[0].SetActive(false);
 		wlcmToBase.enabled = false;
-		GameController.control.plaIndex = index;
+		//GameController.control.plaIndex = index;
 		readData (index);
     }
 

@@ -42,16 +42,13 @@ public class AspectRatio : MonoBehaviour
 				Directory.CreateDirectory ("C:/Users/Monster/Desktop/" + GameController.control.user_name);
 				File.Copy ("C:/Users/Monster/Desktop/statusInfo.txt","C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt",true);
 				File.Create ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_percentCompletion.txt");
+				GameController.control.Save ();
 			}
 		}
 
-	//	if(EventSystem.current.currentSelectedGameObject.name == "Start" && isOld == true){
-	//		if (!Directory.Exists ("C:/Users/Monster/Desktop/" + GameController.control.user_name)) {
-	//			but.	
-	//		} else if (Directory.Exists ("C:/Users/Monster/Desktop/" + GameController.control.user_name))
-	//			but.interactable = true;
-
-	//	}
+		if(EventSystem.current.currentSelectedGameObject.name == "Start" && isOld == true){
+			GameController.control.Load ();
+		}
 
 	}
 }

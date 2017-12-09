@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour {
    // private hero_controller hc;
    /// public GameObject hero;
     
-    public String user_name;
+    public String user_name, levelName;
 	public int score, plaIndex, countCom, perComNum;
 	public bool m;
 	public string[] array = new string[6];
@@ -99,16 +99,9 @@ public class GameController : MonoBehaviour {
 
         //PlayerData data = new PlayerData();
         //score = hc.finalScoreInt;
-        if (Input.GetKey(KeyCode.L)) {
-            Save();
-        }
-        if (Input.GetKey(KeyCode.K)) {
-            Load();
-        }
-
     }
 
-    void Save() {
+    public void Save() {
         BinaryFormatter bformat = new BinaryFormatter();
 		FileStream file = File.Create("C:/Users/Monster/Desktop/savedGames/"+user_name+".txt");
         PlayerData data = new PlayerData();
@@ -118,7 +111,7 @@ public class GameController : MonoBehaviour {
         file.Close();
     }
 
-    void Load() {
+    public void Load() {
 		if (File.Exists("C:/Users/Monster/Desktop/savedGames/" + user_name + ".txt"))
         {
             BinaryFormatter bformat = new BinaryFormatter();
