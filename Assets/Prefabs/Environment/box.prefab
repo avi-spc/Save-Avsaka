@@ -145,13 +145,11 @@ MonoBehaviour:
   surObjectIndex: 0
   extraction: {fileID: 0}
   lightning: {fileID: 0}
-  rockHits: 0
-  plantHits: 0
   broken_box: {fileID: 1574870914865284, guid: 040cf06adf1e1cb47aeccfea9f7bc53f, type: 2}
   egg: {fileID: 0}
   cloud: {fileID: 0}
   surpriseObjects:
-  - {fileID: 1067969255691334, guid: 426ddf37cd4bb974c9f0ededa900537d, type: 2}
+  - {fileID: 1675014505508216, guid: 426ddf37cd4bb974c9f0ededa900537d, type: 2}
   - {fileID: 1385996589218676, guid: 85c40a5810db7d14c970a23cff5e69f6, type: 2}
   - {fileID: 1550105111132312, guid: 74a6e294028c6604bb73a8b79cda05b8, type: 2}
   t: 0

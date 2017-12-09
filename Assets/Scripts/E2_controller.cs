@@ -87,7 +87,7 @@ public class E2_controller : MonoBehaviour {
     }
 
     void EnemyHealth() {
-		if ((coll1.Raycast(hc.gunRay, out hc.gunHit, hc.killRayLength) || coll2.Raycast(hc.gunRay, out hc.gunHit, hc.killRayLength)) && hc.gunHit.transform.tag == "E2")
+		if ((coll1.Raycast(hc.gunRay, out hc.gunHit, hc.killRayLength) || coll2.Raycast(hc.gunRay, out hc.gunHit, hc.killRayLength)) && hc.gunHit.transform.tag == "E2" && Time.timeScale == 1)
         {
             health--;
             if (health <= 0)

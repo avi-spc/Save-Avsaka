@@ -25,7 +25,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CaptureEveryNthFrame: 1
   m_FrameRateMode: 1
-  m_FrameRate: 30
+  m_FrameRate: 60
   m_FrameRateExact: 1
   m_StartFrame: 0
   m_EndFrame: 10
@@ -37,8 +37,8 @@ MonoBehaviour:
   m_BaseFileName:
     m_Pattern: image_<0000>.<ext>
   m_DestinationPath:
-    m_root: 1
-    m_leaf: Recordings
+    m_root: 0
+    m_leaf: C:/Users/Monster/Desktop
   m_InputsSettings:
   - {fileID: 114966004794366854}
   m_RecorderTypeName: UTJ.FrameCapturer.Recorders.EXRRecorder, Assembly-CSharp, Version=0.0.0.0,

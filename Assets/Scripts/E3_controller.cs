@@ -66,7 +66,7 @@ public class E3_controller : MonoBehaviour {
     }
 
     void EnemyHealth() {
-		if ((coll1.Raycast(hc.gunRay, out hc.gunHit, hc.killRayLength) || coll2.Raycast(hc.gunRay, out hc.gunHit, hc.killRayLength) || coll3.Raycast(hc.gunRay, out hc.gunHit, hc.killRayLength)) && hc.gunHit.transform.tag == "E3")
+		if ((coll1.Raycast(hc.gunRay, out hc.gunHit, hc.killRayLength) || coll2.Raycast(hc.gunRay, out hc.gunHit, hc.killRayLength) || coll3.Raycast(hc.gunRay, out hc.gunHit, hc.killRayLength)) && hc.gunHit.transform.tag == "E3" && Time.timeScale == 1)
         {
             health--;
             if (health <= 0)

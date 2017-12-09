@@ -38,14 +38,14 @@ public class env_Objects : MonoBehaviour {
     }
 
 	void FixedUpdate(){
-		surObjectIndex = Random.Range (2, 3	);
+		surObjectIndex = Random.Range (0, 3);
 	}
 
 	// Update is called once per frame
 	void Update () {
 		
         t = Time.deltaTime;
-        if (coll.Raycast(hc.gunRay,out hc.gunHit,1000f) && hc.gunHit.transform.tag == "Box" && Input.GetKey(KeyCode.Space)) {
+		if (coll.Raycast(hc.gunRay,out hc.gunHit,1000f) && hc.gunHit.transform.tag == "Box" && Input.GetKey(KeyCode.Space) && Time.timeScale == 1) {
             boxHits++;
             if (boxHits >= 50) {
                 //hc.perScore = hc.perScore + 100;
@@ -54,27 +54,29 @@ public class env_Objects : MonoBehaviour {
                 GameObject box_Clone = Instantiate(broken_box,transform.position,transform.rotation);
 				surprise = Instantiate (surpriseObjects [surObjectIndex], new Vector3(box_Clone.transform.position.x, box_Clone.transform.position.y + 3, box_Clone.transform.position.z), Quaternion.identity);
 				if (surObjectIndex == 0) {
-					hc.perRock = hc.perRock + 10000;
+					rockHits = rockHits + 100;
+					hc.perRock = rockHits;
 				} else if (surObjectIndex == 1) {
-					hc.perSeed = hc.perSeed + 1000;
+					plantHits = plantHits + 1000;
+					hc.perSeed = plantHits;
 				} else if (surObjectIndex == 2) {
 					hc.perFood = hc.perFood + 10;
 					//surpriseObjects [0].GetComponent<Animator> ().SetTrigger ("comeRock");
 					//surpriseObjects [0].GetComponent<Animator> ().SetTrigger ("goRock");
 				}
-                Destroy(box_Clone, 2f);
+                Destroy (box_Clone, 2f);
 				Destroy (surprise, 4f);
             }
         }
 
-        if (coll.Raycast(hc.gunRay, out hc.gunHit, 1000f) && hc.gunHit.transform.tag == "Rock" && Input.GetKey(KeyCode.Space))
+		if (coll.Raycast(hc.gunRay, out hc.gunHit, 1000f) && hc.gunHit.transform.tag == "Rock" && Input.GetKey(KeyCode.Space) && Time.timeScale == 1)
         {
 			hc.perRock = rockHits++;
             extraction.enableEmission = true;
             extraction.transform.position = hc.gunHit.point;
         }
 
-        if (coll.Raycast(hc.gunRay, out hc.gunHit, 1000f) && hc.gunHit.transform.tag == "Plant" && Input.GetKey(KeyCode.Space))
+		if (coll.Raycast(hc.gunRay, out hc.gunHit, 1000f) && hc.gunHit.transform.tag == "Plant" && Input.GetKey(KeyCode.Space) && Time.timeScale == 1)
         {
 			hc.perSeed = plantHits++;
             extraction.enableEmission = true;

@@ -22,7 +22,6 @@ public class gameScript : MonoBehaviour {
 	GameObject eggI, hero, b_box;
 	private string jsonStringML;
 	private JsonData mandlInfoData;
-	public Collider boxColl;
 	// Use this for initialization
 
 	void Awake(){
@@ -31,7 +30,6 @@ public class gameScript : MonoBehaviour {
 		pausePanel.SetActive (false);
 		miOverPanel.SetActive (false);
 		GameController.control.m = true;
-		boxColl.enabled = true;
 	}
 
 	void Start () {
@@ -54,7 +52,7 @@ public class gameScript : MonoBehaviour {
 			timer.fillAmount = time / 1000f;
 		}
 
-		if(timer.fillAmount<=0 || hc.curr_health <=0){
+		if(timer.fillAmount<=0f || hc.curr_health <=0){
 			miOverPanel.SetActive (true);
 			Time.timeScale = 0;
 			pauseBanner.enabled = false;
@@ -65,7 +63,7 @@ public class gameScript : MonoBehaviour {
 			b_box = Instantiate (box);
 		}
 
-		if (timer.fillAmount <= 0.2f) {
+		if (timer.fillAmount == 0.223f) {
 			//boxColl.enabled = false;
 			b_box.GetComponent<BoxCollider>().isTrigger = true;
 			//Instantiate (b_box, box.transform.position, box.transform.rotation);
