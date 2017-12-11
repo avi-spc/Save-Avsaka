@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 299f04982c9e4f445b808ca62598f2ca
   - enabled: 1
-    path: Assets/Scenes/MiToMain.unity
+    path: Assets/Prefabs/MiToMain.unity
     guid: f66ca154b3f97ef47a50b6e3b66f8c36
   - enabled: 1
     path: Assets/Scenes/GameToMissions.unity
@@ -20,3 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/1.unity
     guid: 69afbfa057dac444c9b50e5a512d0dc7
+  - enabled: 1
+    path: Assets/Scenes/AvsakaRestore.unity
+    guid: 5140e78582ceb594ea37350cf6909ecc

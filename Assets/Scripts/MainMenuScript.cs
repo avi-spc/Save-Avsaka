@@ -126,4 +126,8 @@ public class MainMenuScript : MonoBehaviour {
     public void roundSound() {
         GetComponent<AudioSource>().PlayOneShot(button_over);
     }
+
+	public void resAvsaka(){
+		SceneManager.LoadScene ("AvsakaRestore");
+	}
 }
