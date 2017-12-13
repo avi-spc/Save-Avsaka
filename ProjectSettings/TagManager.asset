@@ -17,6 +17,7 @@ TagManager:
   - Plant
   - Clouds
   - E2_thrower
+  - drowned
   layers:
   - Default
   - TransparentFX

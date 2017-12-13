@@ -159,6 +159,10 @@ public class hero_controller : MonoBehaviour {
             changeHealth(health_rate);
 			GetComponent<AudioSource> ().PlayOneShot (e_hit);
         }
+
+        if (col.gameObject.CompareTag("drowned")) {
+            Invoke("drown", 0.1f);
+        }
     }
 
     void OnTriggerEnter(Collider col)
@@ -212,5 +216,9 @@ public class hero_controller : MonoBehaviour {
 		if(v>0.1f && v<0.12f)
 			GetComponent<AudioSource> ().PlayOneShot (laser);
 	}
+
+    void drown() {
+        curr_health = 0;
+    }
 		
 }
