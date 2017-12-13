@@ -8,7 +8,7 @@ public class hero_controller : MonoBehaviour {
 	public int speed, perScore, finalScoreInt, perFood, finalFoodInt, perSeed, perRock, eK_count;
     private Animator anim;
     bool isWalking, isFiring, isSlashing;
-	public float killRayLength, finalScore, finalFood, curr_health, max_health = 100f, health_rate, v;
+	public float killRayLength, finalScore, finalFood, curr_health, max_health = 100f, health_rate, v,cla;
     public Transform gun;
     int floorMask;
     float rayLength;
@@ -40,6 +40,8 @@ public class hero_controller : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+		cla = transform.position.y;
+		//transform.position.y = Mathf.Clamp (0.5f, 5, 10);
 		if (isWalking == true) {
 			foots ();
 		}
@@ -72,6 +74,7 @@ public class hero_controller : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.W)) {
             transform.Translate(-Vector3.forward * speed * Time.deltaTime);
+			//GetComponent<Rigidbody> ().position = new Vector3 (transform.position.x, Mathf.Clamp (0.5f, 2, 3), transform.position.z);
             isWalking = true;
             anim.SetBool("Walking", isWalking);
             ps.enableEmission = true;
