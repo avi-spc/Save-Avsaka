@@ -94,7 +94,7 @@ public class GameController : MonoBehaviour {
 		sre = File.ReadAllText("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_percentCompletion.txt");
 
 		if (sre.Equals (""))
-			countCom = 0;
+			sre = "0";
 		countCom = int.Parse (sre);
 
         //PlayerData data = new PlayerData();
