@@ -12941,6 +12941,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  rtb: {fileID: 0}
   playerName: {fileID: 0}
   totalScore: {fileID: 0}
   nRY: {fileID: 0}
+  clk: {fileID: 8300000, guid: 591ae5db1c2f4bf4498702b5980f790f, type: 3}

@@ -10,7 +10,9 @@ public class avsakaRestorer : MonoBehaviour {
 	public int planetNumber;
 	public Image circle;
 	public GameObject[] acquired = new GameObject[6];
+	public GameObject rtb;
 	public Text playerName, totalScore, nRY;
+	public AudioClip clk;
 
 	void Awake(){
 		planetNumber = GameController.control.countCom;
@@ -67,5 +69,6 @@ public class avsakaRestorer : MonoBehaviour {
 
 	public void avToMiss(){
 		SceneManager.LoadScene ("GameToMissions");
+		rtb.GetComponent<AudioSource> ().PlayOneShot (clk);
 	}
 }

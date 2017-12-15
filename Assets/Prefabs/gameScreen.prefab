@@ -150,7 +150,6 @@ MonoBehaviour:
   pausePanel: {fileID: 0}
   miOverPanel: {fileID: 0}
   box: {fileID: 1714026091667264, guid: e829b9c474940aa4abeeaa05e8343197, type: 2}
-  b_box: {fileID: 1574870914865284, guid: 040cf06adf1e1cb47aeccfea9f7bc53f, type: 2}
   enemies:
   - {fileID: 1273354343973760, guid: 63e75b72d9e59004fbfd499b170b79be, type: 2}
   - {fileID: 1331187440317496, guid: 967929798a95b6b43a024ea738559fda, type: 2}
@@ -172,4 +171,3 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  boxColl: {fileID: 65030881136120170, guid: e829b9c474940aa4abeeaa05e8343197, type: 2}

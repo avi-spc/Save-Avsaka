@@ -12,11 +12,12 @@ public class missionOver : MonoBehaviour {
 	public bool survived;
     GameObject hero;
 	private hero_controller hc;
-	public GameObject gameScreen;
+	public GameObject gameScreen, rtb;
 	private gameScript gs;
 	private string jsonStringR;
 	private JsonData requiredDataR;
 	public Text[] required = new Text[4];
+	public AudioClip clk;
 	//private JsonData statusInfo;
 
 	//KeyValuePair<string,object> l = new KeyValuePair<string,object>("r",statusInfo);
@@ -79,6 +80,7 @@ public class missionOver : MonoBehaviour {
 	public void returnToBase(){
 		SceneManager.LoadScene ("GameToMissions");
 		GameController.control.Save ();
+		rtb.GetComponent<AudioSource> ().PlayOneShot (clk);
 		//string[] statusToFile = GameController.control.array;
 		//string separator = " ";
 		//string finalStatus = "";
