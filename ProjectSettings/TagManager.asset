@@ -18,6 +18,7 @@ TagManager:
   - Clouds
   - E2_thrower
   - drowned
+  - Avsaka
   layers:
   - Default
   - TransparentFX

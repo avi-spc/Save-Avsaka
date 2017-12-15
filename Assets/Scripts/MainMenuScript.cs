@@ -128,7 +128,7 @@ public class MainMenuScript : MonoBehaviour {
     }
 
 	public void resAvsaka(){
-		SceneManager.LoadScene ("AvsakaRestore");
+		SceneManager.LoadScene ("AvsakaToMissions");
 		GameController.control.m = true;
 	}
 }
