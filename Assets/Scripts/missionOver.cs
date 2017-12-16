@@ -59,7 +59,7 @@ public class missionOver : MonoBehaviour {
 			&& hc.perSeed >= int.Parse((requiredDataR ["Requirements"] [GameController.control.plaIndex] [2]).ToString())
 			&& hc.finalFoodInt >= int.Parse((requiredDataR ["Requirements"] [GameController.control.plaIndex] [3]).ToString())
 			&& survived == true) {
-			conORfai.text = "Conquored ! ! !";
+			conORfai.text = "Conquered ! ! !";
 			GameController.control.array[GameController.control.plaIndex] = "Completed";
 		} 
 

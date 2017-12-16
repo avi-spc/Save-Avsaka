@@ -2918,12 +2918,12 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: d077f4344f2750848a6d083838ed1768, type: 3}
-    m_FontSize: 48
+    m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 48
-    m_Alignment: 0
+    m_MinSize: 1
+    m_MaxSize: 100
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -4147,7 +4147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userInput: {fileID: 0}
-  userPerform: {fileID: 0}
+  userPerform: {fileID: 114316346335771654}
   start: {fileID: 0}
   button_over: {fileID: 8300000, guid: 591ae5db1c2f4bf4498702b5980f790f, type: 3}
 --- !u!222 &222017319257746306
@@ -5021,7 +5021,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1052977171328730}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.949966, y: 5.299999, z: -2}
+  m_LocalPosition: {x: 84, y: -22.600002, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224049297895040572}
@@ -5029,8 +5029,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 39.949974, y: 5.3}
-  m_SizeDelta: {x: 434.1, y: 47.9}
+  m_AnchoredPosition: {x: 84, y: -22.6}
+  m_SizeDelta: {x: 929.1, y: 103.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224714449021351602
 RectTransform:

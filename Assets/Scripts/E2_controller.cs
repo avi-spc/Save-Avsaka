@@ -38,7 +38,7 @@ public class E2_controller : MonoBehaviour {
         isThrowing = false;
         enemy_2 = GetComponent<Rigidbody>();
         hc = hero.GetComponent<hero_controller>();
-        health = 20;
+        health = 50;
         navig.speed = Random.Range(1,4);
         ps.enableEmission = false;
        // attacker.SetActive(false);
@@ -75,7 +75,7 @@ public class E2_controller : MonoBehaviour {
 
     void Attack() {
         ball = Instantiate(attacker, attacker_pos.transform.position, attacker_pos.transform.rotation);
-        ball.AddForce(-heroToEnemy * 25f);
+        ball.AddForce(-heroToEnemy * 50f);
        // Destroy(ball, 1f);
     }
 
@@ -100,6 +100,6 @@ public class E2_controller : MonoBehaviour {
             }
         }
 
-        E2_health.fillAmount = health / 20f;
+        E2_health.fillAmount = health / 50f;
     }
 }

@@ -710,7 +710,7 @@ MonoBehaviour:
   userInput: {fileID: 223591240096955556}
   userPerform: {fileID: 0}
   start: {fileID: 114188299406681186}
-  button_over: {fileID: 0}
+  button_over: {fileID: 8300000, guid: 591ae5db1c2f4bf4498702b5980f790f, type: 3}
 --- !u!114 &114433194639123102
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -930,7 +930,7 @@ MonoBehaviour:
   userInput: {fileID: 223591240096955556}
   userPerform: {fileID: 0}
   start: {fileID: 114188299406681186}
-  button_over: {fileID: 0}
+  button_over: {fileID: 8300000, guid: 591ae5db1c2f4bf4498702b5980f790f, type: 3}
 --- !u!114 &114741578031850702
 MonoBehaviour:
   m_ObjectHideFlags: 1

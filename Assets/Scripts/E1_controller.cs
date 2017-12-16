@@ -36,7 +36,7 @@ public class E1_controller : MonoBehaviour
         navig = GetComponent<NavMeshAgent>();
         enemy_1 = GetComponent<Rigidbody>();
         isAttacking = false;
-        health = 100;
+        health = 50;
         hc = hero.GetComponent<hero_controller>();
         navig.speed = Random.Range(1, 4);
         ps.enableEmission = false;
@@ -90,7 +90,7 @@ public class E1_controller : MonoBehaviour
             }
         }
 
-        E1_health.fillAmount = health / 100f;
+        E1_health.fillAmount = health / 50f;
 
     }
     //void OnCollisionEnter(Collision col)
