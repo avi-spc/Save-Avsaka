@@ -20,7 +20,7 @@ public class bu : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if (SceneManager.GetActiveScene().buildIndex == 2) {
+		if (SceneManager.GetActiveScene().buildIndex == 3) {
 			loadTime = 0;
 			g ();
 		}
@@ -31,23 +31,25 @@ public class bu : MonoBehaviour {
 	void Update () {
 		loadTime++;
 		missionsLoader.fillAmount = loadTime / 100f;
-		if (loadTime >= 100 && SceneManager.GetActiveScene().buildIndex == 2) {
+		if (loadTime >= 100 && SceneManager.GetActiveScene().buildIndex == 3) {
 			SceneManager.LoadScene ("Main Menu");
 			loadingLevel.text = "Loading . . . MISSIONS";
 		}
 
-		if (loadTime >= 100 && SceneManager.GetActiveScene().buildIndex == 1) {
+		if (loadTime >= 100 && SceneManager.GetActiveScene().buildIndex == 2) {
 			SceneManager.LoadScene ("Main Menu");
 			GameController.control.user_name = "";
 			GameController.control.score = 0;
 			loadingLevel.text = "Loading . . . MAIN MENU";
 		}
 
-		if (SceneManager.GetActiveScene ().buildIndex == 3) {
+		if (SceneManager.GetActiveScene ().buildIndex == 4) {
 			loadingLevel.text = "Loading . . . " + loadLevelName;
 			if (loadTime >= 100) {
-				
-				SceneManager.LoadScene (GameController.control.plaIndex + 4);
+				if (GameController.control.plaIndex == 0)
+					SceneManager.LoadScene (5);
+				else if (GameController.control.plaIndex > 0)
+					SceneManager.LoadScene ("ComingSoon");
 			}
 		}
 

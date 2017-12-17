@@ -43,7 +43,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -984,7 +984,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 877501563}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 187.7, y: -107.1, z: 0}
+  m_LocalPosition: {x: 187.7, y: -129.6, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 2003283154}
@@ -1307,12 +1307,12 @@ Prefab:
     - target: {fileID: 224289539857971272, guid: 0d5235cd3de2e054699ef8afe220479c,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 342
+      value: 382.5
       objectReference: {fileID: 0}
     - target: {fileID: 224289539857971272, guid: 0d5235cd3de2e054699ef8afe220479c,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 192.5
+      value: 215
       objectReference: {fileID: 0}
     - target: {fileID: 224289539857971272, guid: 0d5235cd3de2e054699ef8afe220479c,
         type: 2}
