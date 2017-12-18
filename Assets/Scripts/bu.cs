@@ -20,7 +20,7 @@ public class bu : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if (SceneManager.GetActiveScene().buildIndex == 3) {
+		if (SceneManager.GetActiveScene().buildIndex == 4) {
 			loadTime = 0;
 			g ();
 		}
@@ -31,23 +31,23 @@ public class bu : MonoBehaviour {
 	void Update () {
 		loadTime++;
 		missionsLoader.fillAmount = loadTime / 100f;
-		if (loadTime >= 100 && SceneManager.GetActiveScene().buildIndex == 3) {
+		if (loadTime >= 100 && SceneManager.GetActiveScene().buildIndex == 4) {
 			SceneManager.LoadScene ("Main Menu");
 			loadingLevel.text = "Loading . . . MISSIONS";
 		}
 
-		if (loadTime >= 100 && SceneManager.GetActiveScene().buildIndex == 2) {
+		if (loadTime >= 100 && SceneManager.GetActiveScene().buildIndex == 3) {
 			SceneManager.LoadScene ("Main Menu");
 			GameController.control.user_name = "";
 			GameController.control.score = 0;
 			loadingLevel.text = "Loading . . . MAIN MENU";
 		}
 
-		if (SceneManager.GetActiveScene ().buildIndex == 4) {
+		if (SceneManager.GetActiveScene ().buildIndex == 5) {
 			loadingLevel.text = "Loading . . . " + loadLevelName;
 			if (loadTime >= 100) {
 				if (GameController.control.plaIndex == 0)
-					SceneManager.LoadScene (5);
+					SceneManager.LoadScene (6);
 				else if (GameController.control.plaIndex > 0)
 					SceneManager.LoadScene ("ComingSoon");
 			}
@@ -69,13 +69,13 @@ public class bu : MonoBehaviour {
 		//for (int i = 0; i < GameController.control.array.Length; i++) {
 		finalStatus = string.Join (separator, statusToFile);
 		//}
-		if (File.Exists ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt")) {
-			File.WriteAllText ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt",finalStatus);
+		if (File.Exists (Application.persistentDataPath + "/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt")) {
+			File.WriteAllText (Application.persistentDataPath + "/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt",finalStatus);
 			//	Debug
 		}
 
-		if (File.Exists ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_percentCompletion.txt")) {
-			File.WriteAllText ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_percentCompletion.txt",c.ToString());
+		if (File.Exists (Application.persistentDataPath + "/" + GameController.control.user_name + "/" + GameController.control.user_name + "_percentCompletion.txt")) {
+			File.WriteAllText (Application.persistentDataPath + "/" + GameController.control.user_name + "/" + GameController.control.user_name + "_percentCompletion.txt",c.ToString());
 			//	Debug
 		}
 	}

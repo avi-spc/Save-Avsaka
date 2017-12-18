@@ -1,0 +1,40 @@
+{
+  "Planets" : [
+    {
+      "mcode" : "1010L",
+      "pname" : "Loprax",
+      "pdistance" : "3 Light Years",
+      "dlevel" : "Easy"
+    },
+    {
+      "mcode" : "7223K",
+      "pname" : "Kuno",
+      "pdistance" : "7 Light Years",
+      "dlevel" : "Normal"
+    },
+    {
+      "mcode" : "4577C",
+      "pname" : "Carsona",
+      "pdistance" : "9 Light Years",
+      "dlevel" : "Moderate"
+    },
+    {
+      "mcode" : "2372S",
+      "pname" : "Saarec",
+      "pdistance" : "15 Light Years",
+      "dlevel" : "Moderate"
+    },
+    {
+      "mcode" : "6362P",
+      "pname" : "Prixa",
+      "pdistance" : "18 Light Years",
+      "dlevel" : "Hard"
+    },
+    {
+      "mcode" : "9384Q",
+      "pname" : "Quartos",
+      "pdistance" : "25 Light Years",
+      "dlevel" : "Hard"
+    }
+  ]
+}

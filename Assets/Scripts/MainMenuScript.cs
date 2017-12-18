@@ -57,7 +57,7 @@ public class MainMenuScript : MonoBehaviour {
     }
 
     public void FrominputField() {
-		if (GameController.control.user_name != "" && Directory.Exists ("C:/Users/Monster/Desktop/" + GameController.control.user_name))
+		if (GameController.control.user_name != "" && Directory.Exists (Application.persistentDataPath + "/" + GameController.control.user_name))
         {
             userInput.enabled = false;
             start.enabled = false;
@@ -65,7 +65,7 @@ public class MainMenuScript : MonoBehaviour {
     }
 
     public void UserToMissions() {
-		if(GameController.control.user_name != "" && Directory.Exists ("C:/Users/Monster/Desktop/" + GameController.control.user_name))
+		if(GameController.control.user_name != "" && Directory.Exists (Application.persistentDataPath + "/" + GameController.control.user_name))
             anim.SetTrigger("UsMi");
     }
 

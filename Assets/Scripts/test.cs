@@ -206,7 +206,7 @@ public class test : MonoBehaviour {
     }
 
 	void readData(int i){
-		jsonString = File.ReadAllText("C:/Users/Monster/Desktop/planetsInfo.json");
+		jsonString = File.ReadAllText(Application.streamingAssetsPath + "/planetsInfo.json");
 		planetsData = JsonMapper.ToObject (jsonString);
 		for (int j = 0; j < plaInfo.Length-1; j++) {
 			plaInfo[j].text = (planetsData ["Planets"] [i][j]).ToString();

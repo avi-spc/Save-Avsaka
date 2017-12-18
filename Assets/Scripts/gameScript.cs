@@ -33,7 +33,7 @@ public class gameScript : MonoBehaviour {
 	}
 
 	void Start () {
-        time = 1000f;
+        time = 7200f;
         anim = GetComponent<Animator>();
         comeIn = false;
         ch = 0;
@@ -49,7 +49,7 @@ public class gameScript : MonoBehaviour {
 		
 		if (Time.timeScale == 1) {
 			time--;
-			timer.fillAmount = time / 1000f;
+			timer.fillAmount = time / 7200f;
 		}
 
 		if(timer.fillAmount<=0f || hc.curr_health <=0){
@@ -116,7 +116,7 @@ public class gameScript : MonoBehaviour {
 
 
 	void readmlInfo(){
-		jsonStringML = File.ReadAllText ("C:/Users/Monster/Desktop/planetsInfo.json");
+		jsonStringML = File.ReadAllText (Application.streamingAssetsPath + "/planetsInfo.json");
 		mandlInfoData = JsonMapper.ToObject (jsonStringML);
 		mandlInfo [0].text = (mandlInfoData ["Planets"] [GameController.control.plaIndex] [1]).ToString ();
 		mandlInfo [1].text = (mandlInfoData ["Planets"] [GameController.control.plaIndex] [3]).ToString ();

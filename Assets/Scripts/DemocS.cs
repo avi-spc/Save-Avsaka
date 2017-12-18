@@ -8,6 +8,7 @@ public class DemocS : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Invoke ("BackFromDemo",3f);
+		Debug.Log (Application.persistentDataPath);
 	}
 	
 	// Update is called once per frame

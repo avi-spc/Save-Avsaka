@@ -49,7 +49,7 @@ public class GameController : MonoBehaviour {
 
 	void FixedUpdate(){
 		//if (File.Exists ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt")) {
-			StreamReader sr = new StreamReader ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt");
+		StreamReader sr = new StreamReader (Application.persistentDataPath + "/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt");
 			//string[] array;
 			string str = "";
 			str = sr.ReadLine ();
@@ -91,7 +91,7 @@ public class GameController : MonoBehaviour {
 		//v = Mathf.Repeat (Time.time, 2f);
 		//if(v<0.01f)
 
-		sre = File.ReadAllText("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_percentCompletion.txt");
+		sre = File.ReadAllText(Application.persistentDataPath + "/" + GameController.control.user_name + "/" + GameController.control.user_name + "_percentCompletion.txt");
 
 		if (sre.Equals (""))
 			sre = "0";
@@ -103,7 +103,7 @@ public class GameController : MonoBehaviour {
 
     public void Save() {
         BinaryFormatter bformat = new BinaryFormatter();
-		FileStream file = File.Create("C:/Users/Monster/Desktop/savedGames/"+user_name+".txt");
+		FileStream file = File.Create(Application.persistentDataPath + "/" + user_name + "/" + user_name + ".txt");
         PlayerData data = new PlayerData();
         data.score = score;
         data.user_name = user_name;
@@ -112,10 +112,10 @@ public class GameController : MonoBehaviour {
     }
 
     public void Load() {
-		if (File.Exists("C:/Users/Monster/Desktop/savedGames/" + user_name + ".txt"))
+		if (File.Exists(Application.persistentDataPath + "/" + user_name + ".txt"))
         {
             BinaryFormatter bformat = new BinaryFormatter();
-			FileStream file = File.Open("C:/Users/Monster/Desktop/savedGames/" + user_name + ".txt", FileMode.Open);
+			FileStream file = File.Open(Application.persistentDataPath + "/" + user_name + "/" + user_name + ".txt", FileMode.Open);
             PlayerData data = (PlayerData)bformat.Deserialize(file);
             file.Close();
             user_name = data.user_name;

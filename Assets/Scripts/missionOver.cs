@@ -70,7 +70,7 @@ public class missionOver : MonoBehaviour {
 	}
 
 	void readRequirements(){
-		jsonStringR = File.ReadAllText ("C:/Users/Monster/Desktop/successRequirements.json");
+		jsonStringR = File.ReadAllText (Application.streamingAssetsPath + "/successRequirements.json");
 		requiredDataR = JsonMapper.ToObject (jsonStringR);
 		for (int j = 0; j < required.Length; j++) {
 			required [j].text = (requiredDataR ["Requirements"] [GameController.control.plaIndex] [j]).ToString ();

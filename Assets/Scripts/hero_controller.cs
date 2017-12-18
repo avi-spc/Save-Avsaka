@@ -161,7 +161,7 @@ public class hero_controller : MonoBehaviour {
         }
 
         if (col.gameObject.CompareTag("drowned")) {
-            Invoke("drown", 0.1f);
+            Invoke("drown", 0.2f);
         }
     }
 
@@ -191,13 +191,13 @@ public class hero_controller : MonoBehaviour {
 		//GetComponent<AudioSource> ().PlayOneShot (e_hit);
     }
 
-    void OnParticleCollision(GameObject other)
-    {
-        other = GetComponent<GameObject>();
-        health_rate = 10f;
-        changeHealth(health_rate);
+   // void OnParticleCollision(GameObject other)
+    //{
+    //    other = GetComponent<GameObject>();
+   //     health_rate = 10f;
+   //     changeHealth(health_rate);
 		//GetComponent<AudioSource> ().PlayOneShot (e_hit);
-    }
+   // }
 
     public void changeHealth(float health)
     {

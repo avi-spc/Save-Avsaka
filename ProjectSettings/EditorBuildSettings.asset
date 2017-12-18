@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/SpashScreen.unity
+    guid: 55c922e2952b4764f90af7da20d9cb87
+  - enabled: 1
     path: Assets/Scenes/LogoScreen.unity
     guid: a4f472ee14a7c3a468dc60b16725a6be
   - enabled: 1

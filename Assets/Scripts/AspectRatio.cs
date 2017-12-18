@@ -38,10 +38,10 @@ public class AspectRatio : MonoBehaviour
 	public void createFile(){
 		GameController.control.user_name = user.text;
 		if (EventSystem.current.currentSelectedGameObject.name == "Start" && isOld == false) {
-			if (!Directory.Exists ("C:/Users/Monster/Desktop/" + GameController.control.user_name)) {
-				Directory.CreateDirectory ("C:/Users/Monster/Desktop/" + GameController.control.user_name);
-				File.Copy ("C:/Users/Monster/Desktop/statusInfo.txt","C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt",true);
-				File.Create ("C:/Users/Monster/Desktop/" + GameController.control.user_name + "/" + GameController.control.user_name + "_percentCompletion.txt");
+			if (!Directory.Exists (Application.persistentDataPath + "/" + GameController.control.user_name)) {
+				Directory.CreateDirectory (Application.persistentDataPath + "/" + GameController.control.user_name);
+				File.Copy (Application.streamingAssetsPath + "/statusInfo.txt",Application.persistentDataPath + "/" + GameController.control.user_name + "/" + GameController.control.user_name + "_statusInfo.txt",true);
+				File.Create (Application.persistentDataPath + "/" + GameController.control.user_name + "/" + GameController.control.user_name + "_percentCompletion.txt");
 				GameController.control.Save ();
 			}
 		}
