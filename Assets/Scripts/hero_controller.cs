@@ -16,13 +16,14 @@ public class hero_controller : MonoBehaviour {
     public Ray gunRay;
     public RaycastHit gunHit;
     public ParticleSystem ps;
-    public Text scoreText, seed, rock, food;
+    public Text scoreText, seed, rock, food, ekills;
     public Image hero_health;
     public GameObject dead_hero;
 	public AudioClip laser, wak, e_hit, k;
     public LineRenderer line;
     AudioSource s;
-    void Start () {
+    
+	void Start () {
         player = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
         isWalking = false;
@@ -34,7 +35,7 @@ public class hero_controller : MonoBehaviour {
         ps.enableEmission = false;
         perScore  = perFood = perRock = perSeed = 0;
         curr_health = max_health;
-       
+		eK_count = 0;
        //s = GetComponent<AudioSource>();  
     }
 
@@ -109,6 +110,7 @@ public class hero_controller : MonoBehaviour {
         increaseFood();
         rock.text = perRock.ToString();
         seed.text = perSeed.ToString();
+		ekills.text = eK_count.ToString ();
     }
 		
 	void TurnAround() {

@@ -322,6 +322,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1799288960867250
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4157606119524138}
+  - component: {fileID: 65832411725551552}
+  m_Layer: 11
+  m_Name: heroNC
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1846485733050114
 GameObject:
   m_ObjectHideFlags: 1
@@ -442,6 +458,19 @@ Transform:
   m_Father: {fileID: 4157919398356242}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 41.046, y: -90.00001, z: 90.00001}
+--- !u!4 &4157606119524138
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1799288960867250}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.21000004, y: 1.01, z: -0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4653730178370958}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4157919398356242
 Transform:
   m_ObjectHideFlags: 1
@@ -558,6 +587,7 @@ Transform:
   - {fileID: 4540690865343782}
   - {fileID: 4469709315808514}
   - {fileID: 4168119411678632}
+  - {fileID: 4157606119524138}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
@@ -1276,6 +1306,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.97}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65832411725551552
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1799288960867250}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.96, y: 14.33, z: 1.14}
+  m_Center: {x: 0, y: 5.58, z: 0}
 --- !u!65 &65835491974129238
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1548,12 +1590,14 @@ MonoBehaviour:
   max_health: 100
   health_rate: 0
   v: 0
+  cla: 0
   gun: {fileID: 4961602813517898}
   ps: {fileID: 198294900398544224}
   scoreText: {fileID: 0}
   seed: {fileID: 0}
   rock: {fileID: 0}
   food: {fileID: 0}
+  ekills: {fileID: 0}
   hero_health: {fileID: 0}
   dead_hero: {fileID: 1707450384719482, guid: beac78a5b92d99142a5b837c5785cece, type: 2}
   laser: {fileID: 8300000, guid: a7fe47e20b8d52e45b544d07491946a0, type: 3}
