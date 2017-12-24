@@ -19,6 +19,6 @@ public class cloud : MonoBehaviour {
 	}
 
 	void loadMainMenu(){
-		SceneManager.LoadScene ("Main Menu");
+		SceneManager.LoadScene ("HTP");
 	}
 }
