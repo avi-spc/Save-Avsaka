@@ -7,7 +7,9 @@ He invades different planets, fights enemies, collect valuable resources and bri
 
 
 __Genre :__ RPG Shooter
+
 __Platforms :__ PC
+
 __Availabe on Windows Store :__ [Avsaka](https://www.microsoft.com/store/apps/9PH3SRPHGC22)
 
 ### Tools Used
